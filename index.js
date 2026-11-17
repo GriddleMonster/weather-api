@@ -1,11 +1,12 @@
 const { createServer } = require("node:http");
 
 const server = createServer((req, res) => {
-  const { pathname } = new URL(req.url, "http://localhost");
+  const { pathname, searchParams } = new URL(req.url, "http://localhost");
 
   if (req.method === "GET" && pathname === "/weather") {
+    const location = searchParams.get("location");
     const weatherData = {
-      location: "Boston, MA",
+      location,
       currentTemp: "40",
       conditions: "Rainy",
       precipationProbability: "35%",
