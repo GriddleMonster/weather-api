@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/GriddleMonster/weather-api/issues"
   },
-  "homepage": "https://github.com/GriddleMonster/weather-api#readme"
+  "homepage": "https://github.com/GriddleMonster/weather-api#readme",
+  "dependencies": {
+    "axios": "^1.21.1"
+  }
 }
